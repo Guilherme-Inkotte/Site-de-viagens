@@ -3,13 +3,19 @@
         <meta charset="UTF-8">
         <title>Imagens</title>
         <link rel="stylesheet" href='./css/reset.css' />
-        <link rel="stylesheet" href='./css/global.css' />
+        <link rel="stylesheet" href='./css/main.css' />
     </head>
     <body>
-        <h1>Menu</h1>
-        <button onclick="navigate('images')">Imagens</button>
-        <button onclick="navigate('videos')">Vídeos</button>
-        <button onclick="navigate('signIn')">Cadastro</button>
+        <div class='content-container'>
+            <div class='header'>
+                <h2>Seja</h2>
+                <h1 class='page-title'>Bem-Vindo!</h1>
+                <h2>O que você deseja acessar?</h2>
+            </div>
+            <a class="navigation-button" onclick="navigate('images')"><span>Imagens</span></a>
+            <a class="navigation-button" onclick="navigate('videos')"><span>Vídeos</span></a>
+            <a class="navigation-button" onclick="navigate('signIn')"><span>Cadastro</span></a>
+        </div>
     </body>
     <script src='./js/main.js'></script>
 </html>

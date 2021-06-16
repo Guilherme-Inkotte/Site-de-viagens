@@ -3,29 +3,31 @@
         <meta charset="UTF-8">
         <title>Cadastro</title>
         <link rel="stylesheet" href='./css/reset.css' />
-        <link rel="stylesheet" href='./css/global.css' />
+        <link rel="stylesheet" href='./css/main.css' />
+        <link rel="stylesheet" href='./css/signIn.css' />
     </head>
     <body>
-        <form>
-            <h1>Formulário de cadastro</h1>
+        <p>teste</p>
+        <form class='content-container'>
+            <h1 class='form-title'>Formulário de cadastro</h1>
             <div class='data-row'>
-                <label for='name'>Nome: </label>
-                <input id='name' type='text' />
+                <label for='name'>Nome:</label>
+                <input placeholder="Escreva o seu nome" id='name' type='text' />
             </div>
             <div class='data-row'>
-                <label for='email'>E-mail: </label>
-                <input id='email' type='text' />
+                <label for='email'>E-mail:</label>
+                <input placeholder="Escreva o seu email" id='email' type='text' />
             </div>
             <div class='data-row'>
-                <label for='password'>Senha: </label>
-                <input id='password' type='password' />
+                <label for='password'>Senha:</label>
+                <input placeholder="Escreva a sua senha" id='password' type='password' />
             </div>
             <div class='data-row'>
-                <label for='birthdate'>Data de nascimento: </label>
+                <label for='birthdate'>Data de nascimento:</label>
                 <input id='birthdate' type='date' />
             </div>
             <div class='data-row'>
-                <label>Gênero: </label>
+                <label>Gênero:</label>
                 <input id='male' type='radio' name='gender' value='M' />
                 <label for='male'>Masculino</label>
                 <input id='female' type='radio' name='gender' value='F' />
@@ -33,8 +35,9 @@
                 <input id='none' type='radio' name='gender' value='N' />
                 <label for='none'>Prefiro não informar</label>
             </div>
+            <a class="navigation-button" id='submit-button'><span>Finalizar</span></a>
         </form>
-        <button onclick="submit()">Finalizar</button>
     </body>
     <script src='./js/main.js'></script>
+    <script src='./js/cadastro.js'></script>
 </html>
