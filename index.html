@@ -4,18 +4,21 @@
         <title>Imagens</title>
         <link rel="stylesheet" href='./css/reset.css' />
         <link rel="stylesheet" href='./css/main.css' />
+        <link rel="stylesheet" href='./css/authenticated.css' />
     </head>
     <body>
-        <div class='content-container'>
-            <div class='header'>
-                <h2>Seja</h2>
-                <h1 class='page-title'>Bem-Vindo!</h1>
-                <h2>O que você deseja acessar?</h2>
-            </div>
-            <a class="navigation-button" onclick="navigate('images')"><span>Imagens</span></a>
-            <a class="navigation-button" onclick="navigate('videos')"><span>Vídeos</span></a>
-            <a class="navigation-button" onclick="navigate('signIn')"><span>Cadastro</span></a>
-        </div>
+      <div class='content-container'>
+          <div class='header fade-in'>
+              <h2>Seja</h2>
+              <h1 class='page-title'>Bem-Vindo!</h1>
+              <h2>O que você deseja acessar?</h2>
+          </div>
+          <div>
+            <a class="navigation-button fade-in-delay" onclick="navigate('images')"><span>Imagens</span></a>
+            <a class="navigation-button fade-in-delay" onclick="navigate('videos')"><span>Vídeos</span></a>
+            <a class="navigation-button fade-in-delay" onclick="navigate('signIn')"><span>Cadastro</span></a>
+          </div>
+      </div>
     </body>
     <script src='./js/main.js'></script>
 </html>

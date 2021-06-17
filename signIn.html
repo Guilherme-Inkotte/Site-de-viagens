@@ -5,28 +5,28 @@
         <link rel="stylesheet" href='./css/reset.css' />
         <link rel="stylesheet" href='./css/main.css' />
         <link rel="stylesheet" href='./css/signIn.css' />
+        <link rel="stylesheet" href='./css/authenticated.css' />
     </head>
     <body>
-        <p>teste</p>
         <form class='content-container'>
-            <h1 class='form-title'>Formulário de cadastro</h1>
-            <div class='data-row'>
+            <h1 class='form-title fade-in'>Formulário de cadastro</h1>
+            <div class='data-row fade-in'>
                 <label for='name'>Nome:</label>
                 <input placeholder="Escreva o seu nome" id='name' type='text' />
             </div>
-            <div class='data-row'>
+            <div class='data-row fade-in'>
                 <label for='email'>E-mail:</label>
                 <input placeholder="Escreva o seu email" id='email' type='text' />
             </div>
-            <div class='data-row'>
+            <div class='data-row fade-in'>
                 <label for='password'>Senha:</label>
                 <input placeholder="Escreva a sua senha" id='password' type='password' />
             </div>
-            <div class='data-row'>
+            <div class='data-row fade-in'>
                 <label for='birthdate'>Data de nascimento:</label>
                 <input id='birthdate' type='date' />
             </div>
-            <div class='data-row'>
+            <div class='data-row fade-in'>
                 <label>Gênero:</label>
                 <input id='male' type='radio' name='gender' value='M' />
                 <label for='male'>Masculino</label>
@@ -35,7 +35,7 @@
                 <input id='none' type='radio' name='gender' value='N' />
                 <label for='none'>Prefiro não informar</label>
             </div>
-            <a class="navigation-button" id='submit-button'><span>Finalizar</span></a>
+            <a class="navigation-button fade-in-delay" id='submit-button'><span>Finalizar</span></a>
         </form>
     </body>
     <script src='./js/main.js'></script>

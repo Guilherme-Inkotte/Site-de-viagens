@@ -1,0 +1,164 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;700&display=swap');
+
+.form-title {
+  font-size: 3em;
+  text-indent: -2px;
+  font-weight: bold;
+  color: #fca311;
+  padding-bottom: .5rem;
+  margin-bottom: 1.5rem;
+}
+
+.data-row {
+  margin-bottom: 1rem;
+  display: flex;
+  align-items: center;
+}
+
+.content-container {
+  display: flex;
+  flex: 0;
+  justify-content: center;
+  margin: auto;
+  min-height: 100vh;
+  flex-direction: column;
+}
+
+.fade-in {
+  animation: fadeIn ease 1s;
+  -webkit-animation: fadeIn ease 1s;
+  -moz-animation: fadeIn ease 1s;
+  -o-animation: fadeIn ease 1s;
+  -ms-animation: fadeIn ease 1s;
+}
+
+.fade-in a {
+  animation: fadeIn ease 1s;
+  -webkit-animation: fadeIn ease 1s;
+  -moz-animation: fadeIn ease 1s;
+  -o-animation: fadeIn ease 1s;
+  -ms-animation: fadeIn ease 1s;
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity:0;
+    transform: translateY(30%);
+  }
+  100% {
+    opacity:1;
+  }
+}
+
+@-moz-keyframes fadeIn {
+  0% {
+    opacity:0;
+    transform: translateY(30%);
+  }
+  100% {
+    opacity:1;
+  }
+}
+
+@-webkit-keyframes fadeIn {
+  0% {
+    opacity:0;
+    transform: translateY(30%);
+  }
+  100% {
+    opacity:1;
+  }
+}
+
+@-o-keyframes fadeIn {
+  0% {
+    opacity:0;
+    transform: translateY(30%);
+  }
+  100% {
+    opacity:1;
+  }
+}
+
+@-ms-keyframes fadeIn {
+  0% {
+    opacity:0;
+    transform: translateY(30%);
+  }
+  100% {
+    opacity:1;
+  }
+}
+
+.fade-in-delay {
+  animation: fadeInDelay ease 1.5s;
+  -webkit-animation: fadeInDelay ease 1.5s;
+  -moz-animation: fadeInDelay ease 1.5s;
+  -o-animation: fadeInDelay ease 1.5s;
+  -ms-animation: fadeInDelay ease 1.5s;
+}
+
+@keyframes fadeInDelay {
+  0% {
+    opacity:0;
+  }
+  50% {
+    opacity: 0;
+    transform: translateY(30%);
+  }
+  100% {
+    opacity:1;
+  }
+}
+
+@-moz-keyframes fadeInDelay {
+  0% {
+    opacity:0;
+  }
+  50% {
+    opacity: 0;
+    transform: translateY(30%);
+  }
+  100% {
+    opacity:1;
+  }
+}
+
+@-webkit-keyframes fadeInDelay {
+  0% {
+    opacity:0;
+  }
+  50% {
+    opacity: 0;
+    transform: translateY(30%);
+  }
+  100% {
+    opacity:1;
+  }
+}
+
+@-o-keyframes fadeInDelay {
+  0% {
+    opacity:0;
+  }
+  50% {
+    opacity: 0;
+    transform: translateY(30%);
+  }
+  100% {
+    opacity:1;
+  }
+}
+
+@-ms-keyframes fadeInDelay {
+  0% {
+    opacity:0;
+  }
+  50% {
+    opacity: 0;
+    transform: translateY(30%);
+  }
+  100% {
+    opacity:1;
+  }
+}
