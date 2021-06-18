@@ -1,12 +1,81 @@
 <html>
-    <head>
-        <meta charset="UTF-8">
-        <title>Vídeos</title>
-        <link rel="stylesheet" href='./css/reset.css' />
-        <link rel="stylesheet" href='./css/main.css' />
-    </head>
-    <body>
-        <h1>Página de vídeos</h1>
-    </body>
-    <script src='./js/main.js'></script>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Vídeos</title>
+    <link rel="stylesheet" href='./css/reset.css' />
+    <link rel="stylesheet" href='./css/main.css' />
+    <link rel="stylesheet" href='./css/videos.css' />
+</head>
+
+<body>
+    <div class="Blocos">
+        <h1>Galeria de videos</h1>
+        <div class="row">
+            <div class="col">
+                <div class="feature-img">
+                    <img src="videos/pic1.png" width="100%">
+                    <img src="videos/play.png" class='play-btn' onclick="playVideo('videos/video.mp4')">
+
+                </div>
+            </div>
+            <div class="col">
+                <div class="small-img-row">
+                    <div class="small-img">
+                        <img src="videos/pic2.png">
+                        <img src="videos/play.png" class='play-btn' onclick="playVideo('videos/video2.mp4')">
+                    </div>
+                    <p>How to add multiplies videos in websites ou galerry</p>
+                </div>
+                <div class="small-img-row">
+                    <div class="small-img">
+                        <img src="videos/pic3.png">
+                        <img src="videos/play.png" class='play-btn' onclick="playVideo('videos/video3.mp4')">
+                    </div>
+                    <p>How to add multiplies videos in websites ou galerry</p>
+
+
+                </div>
+                <div class="small-img-row">
+                    <div class="small-img">
+                        <img src="videos/pic4.png">
+                        <img src="videos/play.png" class='play-btn' onclick="playVideo('videos/video.mp4')">
+                    </div>
+                    <p>How to add multiplies videos in websites ou galerry</p>
+
+
+                </div>
+
+            </div>
+        </div>
+
+    </div>
+
+
+    <div class="video-player" id="videoPlayer">
+        <video width="100%" controls autoplay id="myVideo">
+            <source src="videos/Pexels Videos 1147260.mp4" type="video/mp4">
+        </video>
+        <img src="videos/close.png" class="close-btn" onclick="stopVideo()">
+    </div>
+
+
+
+    <script>
+        var videoPlayer = document.getElementById("videoPlayer");
+        var myVideo = document.getElementById("myVideo");
+
+        function stopVideo() {
+            videoPlayer.style.display = "none";
+        }
+        function playVideo(file) {
+            myVideo.src = file;
+            videoPlayer.style.display = "block";
+
+        }
+    </script>
+</body>
+<script src='./js/main.js'></script>
+<script src='./js/videos.js'></script>
+
 </html>
