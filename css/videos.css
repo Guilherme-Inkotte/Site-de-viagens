@@ -4,8 +4,10 @@
 }
 .Blocos h1{
   padding: 60px 0;
-  color: white;
-  font-size: 44px;
+  font-size: 4em;
+  text-indent: -2px;
+  font-weight: bold;
+  color: #fca311;
   text-align: center;
 }
 .row{
@@ -26,13 +28,21 @@
 }
 .small-img-row{
   display: flex;
-  background: #efefef;
+  background: #14213d;
   margin: 20px 0;
   align-items: center;
   border-radius: 6px;
   overflow: hidden;
   width: 85%;
+  border:#efefef 1px solid;
 }
+
+.col .small-img-row p {
+  font-size: 1em;
+  text-indent: -2px;
+  color: #efefef;
+}
+
 .small-img{
   position: relative;
 }
@@ -74,4 +84,49 @@ video:focus{
   right: 10px;
   width: 30px;
   cursor: pointer;
+}
+
+.return-button{
+  width: 2.75em;
+  cursor: pointer;
+  display: block;
+  height: 2.75em;
+  font-size: 1.25em;
+  line-height: 2.75em;
+  text-decoration: none;
+  color: #FFF;
+  border: 3px solid #fca311;
+  border-radius: 50%;
+  letter-spacing: 2px;
+  text-align: center;
+  position: relative;
+  transition: all .2s;
+  overflow: hidden;
+  position: fixed;
+  top: 1em;
+  left: 1em;
+}
+
+.return-button span{
+  position: relative;
+  z-index: 2;
+}
+
+.return-button:after{
+  position: absolute;
+  content: "";
+  top: 0;
+  left: 0;
+  width: 0;
+  height: 100%;
+  background: #fca311;
+  transition: all .35s;
+}
+
+.return-button:hover span{
+  color: #14213d
+}
+
+.return-button:hover:after{
+  width: 100%;
 }

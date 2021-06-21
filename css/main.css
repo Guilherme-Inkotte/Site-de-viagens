@@ -137,3 +137,76 @@ h2:last-of-type {
     opacity:1;
   }
 }
+
+.fade-in-delay {
+  animation: fadeInDelay ease 1.5s;
+  -webkit-animation: fadeInDelay ease 1.5s;
+  -moz-animation: fadeInDelay ease 1.5s;
+  -o-animation: fadeInDelay ease 1.5s;
+  -ms-animation: fadeInDelay ease 1.5s;
+}
+
+@keyframes fadeInDelay {
+  0% {
+    opacity:0;
+  }
+  50% {
+    opacity: 0;
+    transform: translateY(30%);
+  }
+  100% {
+    opacity:1;
+  }
+}
+
+@-moz-keyframes fadeInDelay {
+  0% {
+    opacity:0;
+  }
+  50% {
+    opacity: 0;
+    transform: translateY(30%);
+  }
+  100% {
+    opacity:1;
+  }
+}
+
+@-webkit-keyframes fadeInDelay {
+  0% {
+    opacity:0;
+  }
+  50% {
+    opacity: 0;
+    transform: translateY(30%);
+  }
+  100% {
+    opacity:1;
+  }
+}
+
+@-o-keyframes fadeInDelay {
+  0% {
+    opacity:0;
+  }
+  50% {
+    opacity: 0;
+    transform: translateY(30%);
+  }
+  100% {
+    opacity:1;
+  }
+}
+
+@-ms-keyframes fadeInDelay {
+  0% {
+    opacity:0;
+  }
+  50% {
+    opacity: 0;
+    transform: translateY(30%);
+  }
+  100% {
+    opacity:1;
+  }
+}
