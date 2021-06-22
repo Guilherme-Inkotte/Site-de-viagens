@@ -7,6 +7,97 @@ body {
     font-family: 'Poppins', sans-serif;
 }
 
+.modal {
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, .7);
+    position: fixed;
+    display: none;
+    z-index: 1;
+    opacity: 0;
+    transition: display 0.8s linear, opacity 0.5s linear;
+}
+
+.modal_contents {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+#bt_close {
+    color:#fca311;
+    background-color: transparent;
+    position: absolute;
+    top: 32px;
+    right: 32px;
+    height: 40px;
+    width: 40px;
+    text-align: center;
+    vertical-align: middle;
+    font-size: 40px;
+    line-height: 40px;
+    border: solid 3px #fca311;
+    border-radius: 50%;
+    transition: all ease-out .4s;
+    cursor: pointer;
+}
+
+#bt_close:hover {
+    background-color: #fca311;
+    color: #14213d;
+}
+
+.modal_active {
+    display: block;
+    opacity: 1;
+}
+
+.return-button {
+  width: 2.75em;
+  cursor: pointer;
+  display: block;
+  height: 2.75em;
+  font-size: 1.25em;
+  line-height: 2.75em;
+  text-decoration: none;
+  color: #FFF;
+  border: 3px solid #fca311;
+  border-radius: 50%;
+  letter-spacing: 2px;
+  text-align: center;
+  position: relative;
+  transition: all .2s;
+  overflow: hidden;
+  position: fixed;
+  top: 1em;
+  left: 1em;
+}
+
+.return-button span {
+  position: relative;
+  z-index: 2;
+}
+
+.return-button:after {
+  position: absolute;
+  content: "";
+  top: 0;
+  left: 0;
+  width: 0;
+  height: 100%;
+  background: #fca311;
+  transition: all .35s;
+}
+
+.return-button:hover span {
+  color: #14213d
+}
+
+.return-button:hover:after {
+  width: 100%;
+}
+
 .content-container {
     display: flex;
     flex: 0;
@@ -18,6 +109,16 @@ body {
 
 .header {
     margin-bottom: .5em;
+}
+
+.subpage-title {
+  font-size: 3em;
+  text-indent: -2px;
+  font-weight: bold;
+  color: #fca311;
+  padding-bottom: .25rem;
+  border-bottom: 2px solid #FFF;
+  margin-bottom: 1.5rem;
 }
 
 .page-title {
@@ -131,6 +232,79 @@ h2:last-of-type {
 @-ms-keyframes fadeIn {
   0% {
     opacity:0;
+    transform: translateY(30%);
+  }
+  100% {
+    opacity:1;
+  }
+}
+
+.fade-in-delay {
+  animation: fadeInDelay ease 1.5s;
+  -webkit-animation: fadeInDelay ease 1.5s;
+  -moz-animation: fadeInDelay ease 1.5s;
+  -o-animation: fadeInDelay ease 1.5s;
+  -ms-animation: fadeInDelay ease 1.5s;
+}
+
+@keyframes fadeInDelay {
+  0% {
+    opacity:0;
+  }
+  50% {
+    opacity: 0;
+    transform: translateY(30%);
+  }
+  100% {
+    opacity:1;
+  }
+}
+
+@-moz-keyframes fadeInDelay {
+  0% {
+    opacity:0;
+  }
+  50% {
+    opacity: 0;
+    transform: translateY(30%);
+  }
+  100% {
+    opacity:1;
+  }
+}
+
+@-webkit-keyframes fadeInDelay {
+  0% {
+    opacity:0;
+  }
+  50% {
+    opacity: 0;
+    transform: translateY(30%);
+  }
+  100% {
+    opacity:1;
+  }
+}
+
+@-o-keyframes fadeInDelay {
+  0% {
+    opacity:0;
+  }
+  50% {
+    opacity: 0;
+    transform: translateY(30%);
+  }
+  100% {
+    opacity:1;
+  }
+}
+
+@-ms-keyframes fadeInDelay {
+  0% {
+    opacity:0;
+  }
+  50% {
+    opacity: 0;
     transform: translateY(30%);
   }
   100% {

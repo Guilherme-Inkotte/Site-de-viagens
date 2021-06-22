@@ -1,15 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;700&display=swap');
 
-.form-title {
-    font-size: 3em;
-    text-indent: -2px;
-    font-weight: bold;
-    color: #fca311;
-    padding-bottom: .5rem;
-    border-bottom: 2px solid #FFF;
-    margin-bottom: 1.5rem;
-}
-
 .data-row {
     margin-bottom: 1rem;
     display: flex;

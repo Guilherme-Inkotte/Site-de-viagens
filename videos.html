@@ -6,73 +6,81 @@
     <link rel="stylesheet" href='./css/reset.css' />
     <link rel="stylesheet" href='./css/main.css' />
     <link rel="stylesheet" href='./css/videos.css' />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 
 <body>
-    <div class="Blocos">
-        <h1>Galeria de videos</h1>
-        <div class="row">
-            <div class="col">
-                <div class="feature-img">
-                    <img src="videos/pic1.png" width="100%">
-                    <img src="videos/play.png" class='play-btn' onclick="playVideo('videos/video.mp4')">
-
-                </div>
-            </div>
-            <div class="col">
-                <div class="small-img-row">
-                    <div class="small-img">
-                        <img src="videos/pic2.png">
-                        <img src="videos/play.png" class='play-btn' onclick="playVideo('videos/video2.mp4')">
-                    </div>
-                    <p>How to add multiplies videos in websites ou galerry</p>
-                </div>
-                <div class="small-img-row">
-                    <div class="small-img">
-                        <img src="videos/pic3.png">
-                        <img src="videos/play.png" class='play-btn' onclick="playVideo('videos/video3.mp4')">
-                    </div>
-                    <p>How to add multiplies videos in websites ou galerry</p>
-
-
-                </div>
-                <div class="small-img-row">
-                    <div class="small-img">
-                        <img src="videos/pic4.png">
-                        <img src="videos/play.png" class='play-btn' onclick="playVideo('videos/video.mp4')">
-                    </div>
-                    <p>How to add multiplies videos in websites ou galerry</p>
-
-
-                </div>
-
+    <div class="modal">
+        <div class="modal_contents">
+            <div class="video-player" id="videoPlayer">
+                <!-- <video width="100%" controls autoplay id="myVideo">
+                    <source src="https://www.youtube.com/watch?v=hysejJ6setk" type="video/mp4"> -->
+                    <!-- <source src="videos/Pexels Videos 1147260.mp4" type="video/mp4"> -->
+                <!-- </video> -->
+                <iframe
+                    height="100%"
+                    width="100%"
+                    id="myVideo"
+                    title="Player do youtube"
+                    frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    allowfullscreen
+                >
+                </iframe>
             </div>
         </div>
-
+        <span id="bt_close">&times;</span>
     </div>
-
-
-    <div class="video-player" id="videoPlayer">
-        <video width="100%" controls autoplay id="myVideo">
-            <source src="videos/Pexels Videos 1147260.mp4" type="video/mp4">
-        </video>
-        <img src="videos/close.png" class="close-btn" onclick="stopVideo()">
+    <a class="return-button fade-in" onclick="navigate('index')"><span>ᐊ</span></a>
+    <div class="Blocos">
+        <h1 class="subpage-title fade-in">Galeria de vídeos</h1>
+        <div class="row fade-in">
+            <div class="small-img-row" onclick="playVideo('https://www.youtube.com/embed/00tD-WuzdCE?autoplay=1')">
+                <div class="small-img">
+                    <img src="img/thumb-1.jpg">
+                    <div class='play-btn'>
+                        <i class="fa fa-play"></i>
+                    </div>
+                </div>
+                <p>Dicas de turismo no Japão - parte 1</p>
+            </div>
+            <div class="small-img-row right" onclick="playVideo('https://www.youtube.com/embed/BOAtE9WhAG4?autoplay=1')">
+                <div class="small-img">
+                    <img src="img/thumb-2.jpg">
+                    <div class='play-btn'>
+                        <i class="fa fa-play"></i>
+                    </div>
+                </div>
+                <p>BVLGARI RESORT DUBAI - O hotel MAIS ESPETACULAR de Dubai!</p>
+            </div>
+            <div class="small-img-row" onclick="playVideo('https://www.youtube.com/embed/sBS6e611G3E?autoplay=1')">
+                <div class="small-img">
+                    <img src="img/thumb-3.jpg">
+                    <div class='play-btn'>
+                        <i class="fa fa-play"></i>
+                    </div>
+                </div>
+                <p>South BRAZILIAN STREET FOOD Tour!! Endless Pasteles + Hot Dog | Curitiba, Brazil</p>
+            </div>
+        </div>
     </div>
-
-
 
     <script>
-        var videoPlayer = document.getElementById("videoPlayer");
+        var modal = document.querySelector(".modal");
         var myVideo = document.getElementById("myVideo");
+        let btClose = document.querySelector('#bt_close');
 
         function stopVideo() {
-            videoPlayer.style.display = "none";
+            myVideo.src = '';
+            modal.classList.toggle('modal_active');
         }
+        
         function playVideo(file) {
             myVideo.src = file;
-            videoPlayer.style.display = "block";
-
+            modal.classList.toggle('modal_active');
         }
+
+        btClose.addEventListener('click', stopVideo);
     </script>
 </body>
 <script src='./js/main.js'></script>

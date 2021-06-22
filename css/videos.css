@@ -1,77 +1,118 @@
-.Blocos{
+.Blocos {
   width: 80%;
   margin: 80px auto;
 }
-.Blocos h1{
-  padding: 60px 0;
-  color: white;
-  font-size: 44px;
-  text-align: center;
-}
-.row{
+
+.row {
   display: flex;
   align-items: center;
   flex-wrap: wrap;
 }
-.col{
+
+.col {
   flex-basis: 50%;
   min-width: 250px;
 }
-.feature-img{
+
+.feature-img {
   width: 83%;
   margin:auto;
   position: relative;
   border-radius: 6px;
   overflow: hidden;
 }
-.small-img-row{
+
+.small-img-row {
   display: flex;
-  background: #efefef;
-  margin: 20px 0;
+  background: #14213d;
   align-items: center;
-  border-radius: 6px;
   overflow: hidden;
-  width: 85%;
+  width: 100%;
+  border-style: solid;
+  border-color: #fca311;
+  border-bottom-width: 3px;
+  cursor: pointer;
+  padding-bottom: 2.5rem;
+  margin-top: 1rem;
+  margin-bottom: 4rem;
 }
-.small-img{
+
+.right {
+  flex-direction: row-reverse;
+}
+
+.small-img {
   position: relative;
 }
-.small-img img{
-  width: 150px;
-}
-.small-img-row p{
-  margin-left: 20px;
-  color: #707070;
-  line-height: 22px;
-  font-size: 15px;
-}
-.play-btn{
-  width: 60px;
-  position: absolute;
-  left: 50%;
-  top: 50%;
-  transform: translate(-50%,-50%);
-  cursor: pointer;
 
+.small-img img {
+  width: 360px;
 }
-.small-img .play-btn{
-  width: 35px;
+
+.small-img-row p {
+  margin-left: 1.5rem;
+  margin-right: 1.5rem;
+  color: #FFF;
+  font-size: 1.5rem;
 }
-.video-player{
-  width: 80%;
+
+.play-btn {
+  background-color: #14213d;
+  border: 3px solid #fca311;
+  height: 2rem;
+  width: 2rem;
+  border-radius: 50%;
+  align-items: center;
+  justify-content: center;
+  display: flex;
   position: absolute;
   left: 50%;
   top: 50%;
   transform: translate(-50%,-50%);
-  display: none;
 }
-video:focus{
-  outline: none;
+
+.play-btn i {
+  font-size: 1rem;
+  color: #fca311;
 }
+
+.video-player {
+  width: 80vw;
+  height: 80vh;
+  top: 50%;
+  left: 50%;
+  position: absolute;
+  transform: translate(-50%,-50%);
+  background-color: #14213d;
+}
+
 .close-btn{
   position: absolute;
   top: 10px;
   right: 10px;
   width: 30px;
   cursor: pointer;
+}
+
+@media screen and (max-width: 800px) {
+  .small-img-row {
+    flex-direction: column;
+  }
+  .right {
+    flex-direction: column-reverse;
+  }
+  .small-img-row p {
+    text-align: center;
+    margin-top: 2rem;
+  }
+  .right p {
+    margin-top: 0;
+    margin-bottom: 2rem;
+  }
+  .small-img {
+    width: 100%;
+  }
+  .small-img img {
+    width: 100%;
+  }
 }
